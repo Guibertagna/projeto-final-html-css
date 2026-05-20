@@ -11,13 +11,14 @@
 </head>
 
 <body>
-    <a href="#conteudo-principal" class="skip-link">Ir para o conteúdo principal</a>
+ 
+    <header class="site-header">
+        <a href="#inicio" class="site-header__logo">
+            <img src="assets/images/logobloom.svg" alt="Logo da Bloom" class="logo-bloom">
+        </a>
 
-    <header>
-        <p><strong>Bloom</strong> — Agência de Publicidade</p>
-        <p>Ajudamos marcas a crescerem no Instagram com conteúdo estratégico, vídeo e organização editorial.</p>
-        <nav aria-label="Navegação principal">
-            <ul>
+        <nav class="site-header__nav" aria-label="Navegação principal">
+            <ul class="site-header__nav-list">
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#servicos">Serviços</a></li>
@@ -26,24 +27,29 @@
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
+
+        <span class="site-header__menu-icon" aria-hidden="true">
+            <img src="assets/images/icon.svg" alt="Icone de menu" class="site-header__menu-icon-svg">
+        </span>
     </header>
 
     <main id="conteudo-principal">
-        <section id="inicio" aria-labelledby="hero-titulo">
-            <h1 id="hero-titulo">Sua marca em destaque no Instagram</h1>
-            <p>Planejamos, criamos e publicamos conteúdo que conecta com o público certo — de posts e reels a um
-                calendário claro para manter sua presença consistente.</p>
-            <p><a href="#contato">Fale com a Bloom e monte sua estratégia no Instagram</a></p>
+        <section id="inicio" class="hero" aria-labelledby="hero-titulo">
+            <h1 id="hero-titulo">SEU DIGITAL FLORECE AQUI</h1>
+            <p>Criamos um planejamento estratégico para fortalecer sua presença no Instagram!</p>
+               
+            <p class="hero__cta"><a href="#contato">Comece seu florecer no digital clicando aqui!</a></p>
         </section>
 
-        <section id="sobre" aria-labelledby="sobre-titulo">
-            <h2 id="sobre-titulo">Sobre a Bloom</h2>
+        <section id="sobre" aria-labelledby="sobre-titulo" class="sobre">
+            <h2 id="sobre-titulo">Sobre a <span class="bloom-text">Bloom</span></h2>
             <p>A Bloom existe para simplificar o marketing no Instagram para negócios que precisam de qualidade visual e
                 disciplina editorial, sem perder autenticidade. Unimos criatividade, dados e ritmo de publicação para que
                 seu perfil conte uma história coerente e gere resultado.</p>
-            <figure>
-                <img src="assets/equipe-bloom.jpg"
-                    alt="Equipe criativa da agência Bloom reunida em projeto de campanha para redes sociais.">
+            <figure class="sobre-figure">
+                <img src="assets/images/IMG_0357.JPEG"
+                    alt="Equipe criativa da agência Bloom reunida em projeto de campanha para redes sociais."
+                    loading="lazy" decoding="async">
                 <figcaption>Área criativa onde equipe planeja storytelling e formato de vídeo para redes sociais (imagem a
                     ser atualizada).</figcaption>
             </figure>
@@ -126,33 +132,37 @@
             <p>Seleção de trajetórias típicas de clientes ilustrativa e voz de parcerias (cases abaixo; nomes são
                 fictícios).</p>
 
-            <article aria-labelledby="case-marca-alpha-titulo">
-                <h3 id="case-marca-alpha-titulo">Marca Alpha Food — gastronomia</h3>
-                <p><strong>Desafio:</strong> aumentar alcance dos reels sem perder foco regional.</p>
-                <p><strong>Solução:</strong> calendário misto reels + carousel; edição rápida de vídeo com capítulos claros por prato da semana.</p>
-                <p><strong>Resultado:</strong> ritmo estável de publicações e aumento relatado na taxa de salvamentos em três meses de parceria (estimativa).</p>
-            </article>
+            <div class="resultados-cases">
+                <article aria-labelledby="case-marca-alpha-titulo">
+                    <h3 id="case-marca-alpha-titulo">Marca Alpha Food — gastronomia</h3>
+                    <p><strong>Desafio:</strong> aumentar alcance dos reels sem perder foco regional.</p>
+                    <p><strong>Solução:</strong> calendário misto reels + carousel; edição rápida de vídeo com capítulos claros por prato da semana.</p>
+                    <p><strong>Resultado:</strong> ritmo estável de publicações e aumento relatado na taxa de salvamentos em três meses de parceria (estimativa).</p>
+                </article>
 
-            <article aria-labelledby="case-studios-beta-titulo">
-                <h3 id="case-studios-beta-titulo">Estúdio Beta — fitness local</h3>
-                <p><strong>Desafio:</strong> mostrar método e resultado com pouco tempo disponível dos instrutores.</p>
-                <p><strong>Solução:</strong> bastidores pré-produzidos e sessões rápidas de gravação; edição modular para stories diários.</p>
-                <p><strong>Resultado:</strong> frequência maior de aparecimento no feed próximo aos horários dos treinos mais movimentados.</p>
-            </article>
+                <article aria-labelledby="case-studios-beta-titulo">
+                    <h3 id="case-studios-beta-titulo">Estúdio Beta — fitness local</h3>
+                    <p><strong>Desafio:</strong> mostrar método e resultado com pouco tempo disponível dos instrutores.</p>
+                    <p><strong>Solução:</strong> bastidores pré-produzidos e sessões rápidas de gravação; edição modular para stories diários.</p>
+                    <p><strong>Resultado:</strong> frequência maior de aparecimento no feed próximo aos horários dos treinos mais movimentados.</p>
+                </article>
+            </div>
 
-            <h3>Depoimentos</h3>
+            <div class="resultados-depoimentos">
+                <h3>Depoimentos</h3>
 
-            <blockquote cite="https://www.instagram.com/">
-                <p>A Bloom tirou da gente toda aquela urgência das terças sem post. Houve método: calendário, edição nos
-                    reels ficou com cara de marca grande.</p>
-                <footer>— Clara Nunes em <cite>Doceria Parque</cite></footer>
-            </blockquote>
+                <blockquote cite="https://www.instagram.com/">
+                    <p>A Bloom tirou da gente toda aquela urgência das terças sem post. Houve método: calendário, edição nos
+                        reels ficou com cara de marca grande.</p>
+                    <footer>— Clara Nunes em <cite>Doceria Parque</cite></footer>
+                </blockquote>
 
-            <blockquote cite="https://www.instagram.com/">
-                <p>Editaram nossos vídeos com velocidade sem ruídos e mesmo assim com identidade forte. Voltamos sempre
-                    para atualizar série de bastidores.</p>
-                <footer>— Thiago Menezes em <cite>Atelier Delta</cite></footer>
-            </blockquote>
+                <blockquote cite="https://www.instagram.com/">
+                    <p>Editaram nossos vídeos com velocidade sem ruídos e mesmo assim com identidade forte. Voltamos sempre
+                        para atualizar série de bastidores.</p>
+                    <footer>— Thiago Menezes em <cite>Atelier Delta</cite></footer>
+                </blockquote>
+            </div>
         </section>
 
         <section id="contato" aria-labelledby="contato-titulo">
@@ -191,7 +201,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <nav aria-label="Navegação do rodapé">
             <ul>
                 <li><a href="#inicio">Início</a></li>

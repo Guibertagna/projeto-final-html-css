@@ -1,0 +1,343 @@
+/* bloom — tema centralizado + layout */
+
+@font-face {
+    font-family: 'Barbra';
+    src:
+        url('assets/fonts/Barbra-Regular.otf') format('opentype'),
+        url('assets/fonts/Barbra-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Barbra';
+    src:
+        url('assets/fonts/Barbra-Italic.otf') format('opentype'),
+        url('assets/fonts/Barbra-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Barbra';
+    src:
+        url('assets/fonts/Barbra-High.otf') format('opentype'),
+        url('assets/fonts/Barbra-High.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Barbra';
+    src:
+        url('assets/fonts/Barbra-HighItalic.otf') format('opentype'),
+        url('assets/fonts/Barbra-HighItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+:root {
+    /* paleta */
+    --palette-primary: rgb(205, 52, 116);
+    --palette-secondary: #70043b;
+    --palette-tertiary: #e587a4;
+    --palette-surface-cream: #fbf4ef;
+    --palette-neutral-white: #ffffff;
+
+    /* cores semânticas */
+ 
+    --color-surface-base: var(--palette-surface-cream);
+    --color-bg-page: var(--color-surface-base);
+
+    --color-text-primary: var(--palette-secondary);
+    --color-text-accent: var(--palette-primary);
+    --color-heading-accent: var(--palette-primary);
+
+    --color-border-subtle: color-mix(in srgb, var(--palette-secondary) 22%, transparent);
+    --color-focus-ring: var(--palette-primary);
+
+    /* tipografia  */
+    --font-family-brand: 'Barbra', ui-serif, Georgia, 'Times New Roman', serif;
+    --font-family-body: system-ui, -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+        sans-serif;
+
+    --font-heading: var(--font-family-brand);
+    --font-body: var(--font-family-body);
+
+    --font-weight-regular: 400;
+    --font-weight-strong: 700;
+
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-md: 1.125rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 1.875rem;
+    --font-size-3xl: 2.25rem;
+    --font-size-4xl: 3rem;
+
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.65;
+
+    --letter-spacing-tight: -0.02em;
+    --tracking-normal: 0;
+
+    --breakpoint-header: 750px;
+
+    --hero-padding-block: clamp(3rem, 8vw, 5.5rem);
+    --hero-padding-inline: clamp(1rem, 4vw, 2rem);
+    --hero-content-max: 50rem;
+    --hero-gap: clamp(1rem, 3vw, 1.75rem);
+
+    --sobre-content-max: 42rem;
+    --sobre-image-max-width: min(100%, 22rem);
+    --sobre-image-max-height: clamp(22rem, 55vh, 36rem);
+    --sobre-gap: clamp(1.25rem, 3vw, 2rem);
+    --sobre-padding-block: clamp(2.5rem, 6vw, 4rem);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-normal);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-page);
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1rem 2rem;
+    background-color: var(--palette-secondary);
+}
+
+.site-header__logo {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.logo-bloom {
+    display: block;
+    height: 8rem;
+    width: auto;
+}
+
+.site-header__nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-header__nav-list a {
+    color: var(--color-surface-base);
+    text-decoration: none;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-strong);
+    letter-spacing: var(--tracking-normal);
+}
+
+.site-header__nav-list a:hover,
+.site-header__nav-list a:focus-visible {
+    color: var(--palette-tertiary);
+}
+
+.site-header__nav-list a:focus-visible {
+    outline: 2px solid var(--color-focus-ring);
+    outline-offset: 3px;
+}
+
+.site-header__menu-icon {
+    display: none;
+    color: var(--color-surface-base);
+}
+
+.site-header__menu-icon-svg {
+    display: block;
+    width: 1.75rem;
+    height: 1.75rem;
+}
+main {
+    margin: 3rem;
+}
+
+.hero {
+    width: 100vw;
+    margin-inline: calc(50% - 50vw);
+    margin-top: -3rem;
+    min-height: calc(100vh - 8.75rem);
+
+    background-image:
+        linear-gradient(rgba(112, 4, 59),
+                        rgba(205, 52, 116, 0.4)),
+        url('assets/images/sturudio.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--hero-gap);
+    padding-block: var(--hero-padding-block);
+    padding-inline: var(--hero-padding-inline);
+    text-align: center;
+}
+.hero h1 {
+    margin: 0;
+    max-width: var(--hero-content-max);
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-strong);
+    font-size: clamp(2rem, 5vw, var(--font-size-4xl));
+    line-height: var(--line-height-tight);
+    color: var(--color-surface-base);
+}
+.bloom-text {
+    color: var(--palette-tertiary);
+    font-family: var(--font-heading);
+}
+.hero p {
+    margin: 0;
+    max-width: var(--hero-content-max);
+    font-size: clamp(1rem, 2.5vw, var(--font-size-lg));
+    line-height: var(--line-height-relaxed);
+    color: color-mix(in srgb, var(--color-surface-base) 92%, transparent);
+}
+
+.hero__cta {
+    margin: 0;
+}
+
+.hero__cta a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    padding: 0.85rem 1.5rem;
+    background-color: var(--palette-tertiary);
+    color: var(--color-surface-base);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-strong);
+    text-decoration: none;
+    border-radius: 999px;
+}
+
+.hero__cta a:hover,
+.hero__cta a:focus-visible {
+    background-color: var(--palette-secondary);
+}
+
+.hero__cta a:focus-visible {
+    outline: 2px solid var(--color-focus-ring);
+    outline-offset: 3px;
+}
+
+.sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sobre-gap);
+    padding-block: var(--sobre-padding-block);
+    padding-inline: clamp(1rem, 4vw, 2rem);
+    text-align: center;
+}
+
+.sobre h2 {
+    margin: 0;
+    max-width: var(--sobre-content-max);
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-strong);
+    font-size: clamp(2rem, 5vw, var(--font-size-4xl));
+    line-height: var(--line-height-tight);
+    color: var(--palette-secondary);
+}
+
+.sobre p {
+    margin: 0;
+    max-width: var(--sobre-content-max);
+    font-size: clamp(1rem, 2.5vw, var(--font-size-lg));
+    line-height: var(--line-height-relaxed);
+    color: var(--color-text-primary);
+}
+
+.sobre-figure {
+    margin: 0;
+    width: var(--sobre-image-max-width);
+    max-width: 100%;
+}
+
+.sobre-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: var(--sobre-image-max-height);
+    object-fit: contain;
+    object-position: center top;
+    border-radius: 0.5rem;
+    border: 3px solid var(--color-border-subtle);
+}
+
+.sobre-figure figcaption {
+    margin-top: 0.75rem;
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-normal);
+    color: color-mix(in srgb, var(--palette-secondary) 70%, transparent);
+    text-align: center;
+}
+@media (max-width: 750px) {
+    .site-header {
+        
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        gap: 1rem;
+        padding: 1.45rem 1rem;
+    }
+
+    .logo-bloom {
+        height: 6rem;
+    }
+
+    .site-header__nav {
+        display: none;
+    }
+
+    .site-header__menu-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero {
+        --hero-padding-block: clamp(2.5rem, 10vw, 3.5rem);
+    }
+
+    .hero__cta a {
+        font-size: var(--font-size-base);
+    }
+    .sobre-figure img {
+        border:none;
+    }
+}
+
