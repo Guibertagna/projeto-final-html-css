@@ -11,10 +11,11 @@
 </head>
 
 <body>
+
  
     <header class="site-header">
-        <a href="#inicio" class="site-header__logo">
-            <img src="assets/images/logobloom.svg" alt="Logo da Bloom" class="logo-bloom">
+        <a href="#inicio" class="site-header__logo" aria-label="Bloom — voltar ao início">
+            <img src="assets/images/logobloom.svg" alt="" class="logo-bloom">
         </a>
 
         <nav class="site-header__nav" aria-label="Navegação principal">
@@ -29,29 +30,30 @@
         </nav>
 
         <span class="site-header__menu-icon" aria-hidden="true">
-            <img src="assets/images/icon.svg" alt="Icone de menu" class="site-header__menu-icon-svg">
+            <img src="assets/images/icon.svg" alt="" class="site-header__menu-icon-svg">
         </span>
     </header>
 
-    <main id="conteudo-principal">
+    <main id="conteudo-principal" tabindex="-1">
         <section id="inicio" class="hero" aria-labelledby="hero-titulo">
             <h1 id="hero-titulo">SEU DIGITAL FLORECE AQUI</h1>
             <p>Criamos um planejamento estratégico para fortalecer sua presença no Instagram!</p>
-               
+
             <p class="hero__cta"><a href="#contato">Comece seu florecer no digital clicando aqui!</a></p>
         </section>
 
         <section id="sobre" aria-labelledby="sobre-titulo" class="sobre">
             <h2 id="sobre-titulo">Sobre a <span class="bloom-text">Bloom</span></h2>
-            <p>A Bloom existe para simplificar o marketing no Instagram para negócios que precisam de qualidade visual e
-                disciplina editorial, sem perder autenticidade. Unimos criatividade, dados e ritmo de publicação para que
-                seu perfil conte uma história coerente e gere resultado.</p>
+            <p>
+                A <span class="bloom-text">Bloom</span> nasceu da união da criatividade, estratégia e visão da Mariana e
+                da Beatriz, sócias e fundadoras da agência. Juntas, elas criaram a Bloom com o propósito de transformar
+                marcas em experiências autênticas, conectando pessoas, ideias e resultados.
+            </p>
+
             <figure class="sobre-figure">
-                <img src="assets/images/IMG_0357.JPEG"
-                    alt="Equipe criativa da agência Bloom reunida em projeto de campanha para redes sociais."
+                <img src="assets/images/IMG_0357.JPEG" alt="Sócias e fundadoras da Agência Bloom, Mariana e Beatriz."
                     loading="lazy" decoding="async">
-                <figcaption>Área criativa onde equipe planeja storytelling e formato de vídeo para redes sociais (imagem a
-                    ser atualizada).</figcaption>
+                <figcaption>Mariana e Beatriz, sócias e fundadoras da Agência Bloom.</figcaption>
             </figure>
         </section>
 
@@ -59,144 +61,141 @@
             <h2 id="servicos-titulo">O que fazemos pelo seu Instagram</h2>
             <p>Serviços pensados para quem quer presença profissional, conteúdo recorrente e vídeos com acabagem de
                 agência.</p>
-
-            <article aria-labelledby="servico-conteudo-titulo">
-                <h3 id="servico-conteudo-titulo">Criação de conteúdo</h3>
-                <p>Estrutura criativa para feed, stories e reels, com roteiros e ângulos alinhados à sua marca.</p>
-                <ul>
-                    <li>Ideias de pautas e séries editoriais</li>
-                    <li>Legendas orientadas ao engajamento e à conversão</li>
-                    <li>Adaptação de linguagem ao seu público</li>
-                </ul>
-            </article>
-
-            <article aria-labelledby="servico-video-titulo">
-                <h3 id="servico-video-titulo">Edição de vídeos</h3>
-                <p>Corte, ritmo, legendas dinâmicas e som para reels e stories que prendem atenção nos primeiros
-                    segundos.</p>
-                <ul>
-                    <li>Editagem para reels curtos com foco em retenção</li>
-                    <li>Stories com dinâmica e calls to action claros</li>
-                    <li>Entrega em formatos recomendados para o Instagram</li>
-                </ul>
-            </article>
-
-            <article aria-labelledby="servico-calendario-titulo">
-                <h3 id="servico-calendario-titulo">Calendário de postagens</h3>
-                <p>Organização mensal para eliminar improviso: datas, tipos de peça e metas editorialmente coerentes.
-                </p>
-                <ul>
-                    <li>Planejamento de linha editorial e datas-chave</li>
-                    <li>Harmonização de formatos ao longo da semana</li>
-                    <li>Checklists de revisão antes de publicar</li>
-                </ul>
-            </article>
-
-            <article aria-labelledby="servico-perfil-titulo">
-                <h3 id="servico-perfil-titulo">Gestão de perfil</h3>
-                <p>Construção e manutenção de uma identidade clara nas “camadas visíveis”: bio, destaques e narrativa da
-                    conta.</p>
-                <ul>
-                    <li>Bio objetiva que comunica posicionamento</li>
-                    <li>Estrutura de destaques alinhados a temas ou produtos</li>
-                    <li>Consistência visual com o restante das peças</li>
-                </ul>
-            </article>
+            <div class="servicos-articles">
+                <div class="servico-card">
+                    <article aria-labelledby="servico-conteudo-titulo">
+                        <h3 id="servico-conteudo-titulo">Criação de conteúdo</h3>
+                        <p>Estrutura criativa para feed, stories e reels, com roteiros e ângulos alinhados à sua marca.
+                        </p>
+                        <ul>
+                            <li>Ideias de pautas e séries editoriais</li>
+                            <li>Legendas orientadas ao engajamento e à conversão</li>
+                            <li>Adaptação de linguagem ao seu público</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="servico-card">
+                    <article aria-labelledby="servico-video-titulo">
+                        <h3 id="servico-video-titulo">Edição de vídeos</h3>
+                        <p>Corte, ritmo, legendas dinâmicas e som para reels e stories que prendem atenção nos primeiros
+                            segundos.</p>
+                        <ul>
+                            <li>Editagem para reels curtos com foco em retenção</li>
+                            <li>Stories com dinâmica e calls to action claros</li>
+                            <li>Entrega em formatos recomendados para o Instagram</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="servico-card">
+                    <article aria-labelledby="servico-calendario-titulo">
+                        <h3 id="servico-calendario-titulo">Calendário de postagens</h3>
+                        <p>Organização mensal para eliminar improviso: datas, tipos de peça e metas editorialmente
+                            coerentes.
+                        </p>
+                        <ul>
+                            <li>Planejamento de linha editorial e datas-chave</li>
+                            <li>Harmonização de formatos ao longo da semana</li>
+                            <li>Checklists de revisão antes de publicar</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="servico-card">
+                    <article aria-labelledby="servico-perfil-titulo">
+                        <h3 id="servico-perfil-titulo">Gestão de perfil</h3>
+                        <p>Construção e manutenção de uma identidade clara nas “camadas visíveis”: bio, destaques e
+                            narrativa da
+                            conta.</p>
+                        <ul>
+                            <li>Bio objetiva que comunica posicionamento</li>
+                            <li>Estrutura de destaques alinhados a temas ou produtos</li>
+                            <li>Consistência visual com o restante das peças</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
         </section>
 
-        <section id="processo" aria-labelledby="processo-titulo">
+        <section id="processo" class="processo" aria-labelledby="processo-titulo">
             <h2 id="processo-titulo">Como trabalhamos com você</h2>
             <p>Fluxo objetivo desde o primeiro contato até a rotação de conteúdo no ar.</p>
-            <ol>
-                <li>
-                    <strong>Diagnóstico do perfil:</strong> análise de posicionamento, público e oportunidades de
-                    crescimento.
+            <ol class="processo-fluxo">
+                <li class="processo-etapa">
+                    <article class="processo-card">
+                        <span class="processo-card__num" aria-hidden="true">1</span>
+                        <h3>Diagnóstico do perfil</h3>
+                        <p>Análise de posicionamento, público e oportunidades de crescimento.</p>
+                    </article>
                 </li>
-                <li>
-                    <strong>Estratégia e calendário:</strong> definição de temas, formatos de vídeo/imagem e calendário
-                    editorial.
+                <li class="processo-seta" aria-hidden="true">
+                    <span class="processo-seta__icon"></span>
                 </li>
-                <li>
-                    <strong>Produção e edição:</strong> criação de peças, revisão de texto e vídeo até a versão para
-                    aprovação.
+                <li class="processo-etapa">
+                    <article class="processo-card">
+                        <span class="processo-card__num" aria-hidden="true">2</span>
+                        <h3>Estratégia e calendário</h3>
+                        <p>Definição de temas, formatos de vídeo/imagem e calendário editorial.</p>
+                    </article>
                 </li>
-                <li>
-                    <strong>Publicação e acompanhamento:</strong> alinhamento de horários, publicação quando combinado e
-                    leitura de desempenho para a próxima leva de conteúdo.
+                <li class="processo-seta" aria-hidden="true">
+                    <span class="processo-seta__icon"></span>
+                </li>
+                <li class="processo-etapa">
+                    <article class="processo-card">
+                        <span class="processo-card__num" aria-hidden="true">3</span>
+                        <h3>Produção e edição</h3>
+                        <p>Criação de peças, revisão de texto e vídeo até a versão para aprovação.</p>
+                    </article>
+                </li>
+                <li class="processo-seta" aria-hidden="true">
+                    <span class="processo-seta__icon"></span>
+                </li>
+                <li class="processo-etapa">
+                    <article class="processo-card">
+                        <span class="processo-card__num" aria-hidden="true">4</span>
+                        <h3>Publicação e acompanhamento</h3>
+                        <p>Alinhamento de horários, publicação quando combinado e leitura de desempenho para a próxima
+                            leva de conteúdo.</p>
+                    </article>
                 </li>
             </ol>
         </section>
 
-        <section id="resultados" aria-labelledby="resultados-titulo">
-            <h2 id="resultados-titulo">Resultados e reputação</h2>
-            <p>Seleção de trajetórias típicas de clientes ilustrativa e voz de parcerias (cases abaixo; nomes são
-                fictícios).</p>
 
-            <div class="resultados-cases">
-                <article aria-labelledby="case-marca-alpha-titulo">
-                    <h3 id="case-marca-alpha-titulo">Marca Alpha Food — gastronomia</h3>
-                    <p><strong>Desafio:</strong> aumentar alcance dos reels sem perder foco regional.</p>
-                    <p><strong>Solução:</strong> calendário misto reels + carousel; edição rápida de vídeo com capítulos claros por prato da semana.</p>
-                    <p><strong>Resultado:</strong> ritmo estável de publicações e aumento relatado na taxa de salvamentos em três meses de parceria (estimativa).</p>
-                </article>
+        <section id="contato" class="contato" aria-labelledby="contato-titulo">
+            <header class="contato-cabecalho">
+                <h2 id="contato-titulo">Vamos cultivar sua presença no Instagram</h2>
+                <p>Conte objetivo da conta, período pretendido ou dúvidas sobre calendário e vídeo. Respondemos por
+                    e-mail.</p>
+            </header>
 
-                <article aria-labelledby="case-studios-beta-titulo">
-                    <h3 id="case-studios-beta-titulo">Estúdio Beta — fitness local</h3>
-                    <p><strong>Desafio:</strong> mostrar método e resultado com pouco tempo disponível dos instrutores.</p>
-                    <p><strong>Solução:</strong> bastidores pré-produzidos e sessões rápidas de gravação; edição modular para stories diários.</p>
-                    <p><strong>Resultado:</strong> frequência maior de aparecimento no feed próximo aos horários dos treinos mais movimentados.</p>
-                </article>
-            </div>
-
-            <div class="resultados-depoimentos">
-                <h3>Depoimentos</h3>
-
-                <blockquote cite="https://www.instagram.com/">
-                    <p>A Bloom tirou da gente toda aquela urgência das terças sem post. Houve método: calendário, edição nos
-                        reels ficou com cara de marca grande.</p>
-                    <footer>— Clara Nunes em <cite>Doceria Parque</cite></footer>
-                </blockquote>
-
-                <blockquote cite="https://www.instagram.com/">
-                    <p>Editaram nossos vídeos com velocidade sem ruídos e mesmo assim com identidade forte. Voltamos sempre
-                        para atualizar série de bastidores.</p>
-                    <footer>— Thiago Menezes em <cite>Atelier Delta</cite></footer>
-                </blockquote>
-            </div>
-        </section>
-
-        <section id="contato" aria-labelledby="contato-titulo">
-            <h2 id="contato-titulo">Vamos cultivar sua presença no Instagram</h2>
-            <p>Conte objetivo da conta, período pretendido ou dúvidas sobre calendário e vídeo. Respondemos por e-mail.
-            </p>
-
-            <form action="#" method="post">
-                <p>
-                    <label for="contato-nome">Nome completo</label><br>
+            <form class="contato-formulario" action="#" method="post" aria-label="Formulário de contato">
+                <p class="contato-campo">
+                    <label for="contato-nome">Nome completo</label>
                     <input id="contato-nome" name="nome" type="text" autocomplete="name" required>
                 </p>
-                <p>
-                    <label for="contato-email">E-mail para retorno</label><br>
+                <p class="contato-campo">
+                    <label for="contato-email">E-mail para retorno</label>
                     <input id="contato-email" name="email" type="email" autocomplete="email" required>
                 </p>
-                <p>
-                    <label for="contato-instagram">Instagram do negócio (opcional)</label><br>
+                <p class="contato-campo">
+                    <label for="contato-instagram">Instagram do negócio (opcional)</label>
                     <input id="contato-instagram" name="instagram" type="text" autocomplete="off"
                         placeholder="@sua-marca ou link do perfil">
                 </p>
-                <p>
-                    <label for="contato-mensagem">Mensagem</label><br>
+                <p class="contato-campo">
+                    <label for="contato-mensagem">Mensagem</label>
                     <textarea id="contato-mensagem" name="mensagem" rows="6" required></textarea>
                 </p>
-                <p>
+                <p class="contato-acao">
                     <button type="submit">Enviar mensagem</button>
                 </p>
             </form>
 
-            <address>
-                <p>E-mail direto para orçamentos: <a href="mailto:ola@bloominstagram.ag">ola@bloominstagram.ag</a></p>
-                <p>Instagram da agência Bloom: <a href="https://www.instagram.com/agenciabloomexemplo/"
-                        target="_blank" rel="noopener noreferrer">@agenciabloomexemplo</a></p>
+            <address class="contato-direto">
+                <p>E-mail direto para orçamentos: <a href="mailto:abloomprodutora@gmail.com">abloomprodutora</a></p>
+                <p>Instagram da agência Bloom: <a href="https://www.instagram.com/bloomprodutora/" target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram da Bloom (@bloomprodutora) — abre em nova aba">@bloomprodutora</a></p>
             </address>
         </section>
     </main>
@@ -213,10 +212,13 @@
             </ul>
         </nav>
         <p>
-            <a href="https://www.instagram.com/agenciabloomexemplo/" target="_blank" rel="noopener noreferrer">Instagram —
-                Bloom (@agenciabloomexemplo)</a>
+            <a href="https://www.instagram.com/bloomprodutora/" target="_blank" rel="noopener noreferrer"
+                aria-label="Instagram da Bloom (@bloomprodutora) — abre em nova aba">Instagram
+                —
+                Bloom (@bloomprodutora)</a>
         </p>
-        <p><small>© 2026 Bloom Agência de Publicidade. Dados fictícios de contato apenas para exemplo acadêmico.</small></p>
+        <p><small>© 2026 Bloom Agência de Publicidade.</small>
+        </p>
     </footer>
 </body>
 
